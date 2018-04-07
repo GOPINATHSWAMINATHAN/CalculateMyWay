@@ -18,10 +18,10 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class FindMyWay {
+public class FindMyWay{
 
 
-    double findDistance(final Context context, final double origin_latitude, final double origin_longitude, final double destination_latitude, final double destination_longitude) {
+    static double findDistance(final Context context, final double origin_latitude, final double origin_longitude, final double destination_latitude, final double destination_longitude) {
 
         final Calculate c = new Calculate();
         class RetrieveFeedTask extends AsyncTask<Void, Void, Double> {
@@ -96,7 +96,7 @@ public class FindMyWay {
         return c.getDistance();
     }
 
-    String findDuration(final Context context, final double origin_latitude, final double origin_longitude, final double destination_latitude, final double destination_longitude) {
+    static String findDuration(final Context context, final double origin_latitude, final double origin_longitude, final double destination_latitude, final double destination_longitude) {
 
         final Calculate c = new Calculate();
         class RetrieveFeedTask extends AsyncTask<Void, Void, Double> {
